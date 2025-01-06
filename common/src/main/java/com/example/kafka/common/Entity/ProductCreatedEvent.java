@@ -4,16 +4,16 @@ public class ProductCreatedEvent
 {
 
     private String productId;
-    private String title;
+    private String name;
     private Integer price;
     private Integer Quantity;
 
     public ProductCreatedEvent() {
     }
 
-    public ProductCreatedEvent(String productId, String title, Integer price, Integer quantity) {
+    public ProductCreatedEvent(String productId, String name, Integer price, Integer quantity) {
         this.productId = productId;
-        this.title = title;
+        this.name = name;
         this.price = price;
         Quantity = quantity;
     }
@@ -26,12 +26,12 @@ public class ProductCreatedEvent
         this.productId = productId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Integer getPrice() {
