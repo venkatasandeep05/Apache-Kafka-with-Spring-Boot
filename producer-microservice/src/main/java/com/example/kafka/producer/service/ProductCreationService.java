@@ -25,6 +25,6 @@ public class ProductCreationService
         productCreatedEvent.setName(productDao.getName());
         productCreatedEvent.setProductId(productId);
         kafkaTemplate.send("products-topic",productId,productCreatedEvent);
-        return "product cretead successfully. "+"Product ID is "+productId;
+        return "product created successfully. "+"Product ID is "+productId;
     }
 }
