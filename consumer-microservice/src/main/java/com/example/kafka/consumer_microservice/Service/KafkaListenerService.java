@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class KafkaListenerService
 {
 
-    @KafkaListener(topics = "products-topic")
+    @KafkaListener(topics = "products-topic",groupId ="product-created-event-consumer-group",containerFactory="kafkaListenerContainerFactory")
     public void ProductCreatedEventListener(ProductCreatedEvent productCreatedEvent)
     {
         System.out.println("Newly Created Product Details in the below");
